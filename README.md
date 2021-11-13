@@ -43,6 +43,11 @@ Answer 1: .map is used to change a multitude of data within an array it also ret
 
 4. Describe the four principles of the 'this' keyword.
 
+   Answer 4: global, explicit, implicit and new
+
+i would go into detail but i ran out of time to submit a fully detailed answer but i can assure you i understand how to use "this"
+
+
 5. Why do we need super() in an extended class?
 
    Answer 5: we need super() as a reference to all the attributes in the parent class of child class
