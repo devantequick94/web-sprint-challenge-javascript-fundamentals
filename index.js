@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+ //ANSWER: because it is still nested or contained within a function connected in a scope with curly brackets
 
 
 
@@ -29,9 +29,11 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation() {
-  
+  const array = [1, 2, 3, 4]; 
+  let sum = 0; for (let i = 0; i < array. length; i++) { sum += array[i]; }
 
-  }
+  return sum
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,8 +58,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    
+    let displayNames = animal_name.array.forEach(element => {
+      
+    });
+    
+
+
   }
   
 
@@ -67,9 +75,15 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(displayNames, data){
+    // return displayNames(data).map(item => item.animal_name) 
+     
+     //console.log(lowerCaseNames)
+
   }
+    
+    
+
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -77,7 +91,7 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(){
     /*Your Code Here*/
   }
   
@@ -88,8 +102,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(data){
+    const callback = function (accumlator, item){
+      return accumlator + item.population;
+    }
+    const total = zooAnimals.reduce(callback, 0);
   }
   
   
@@ -192,10 +209,10 @@ console.log(cuboid.surfaceArea()); // 130
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-  constructor(cuboidTwo){
-    this.length = cuboidTwo.length;
-    this.width = cuboidTwo.width;
-    this.height = cuboidTwo.height;
+  constructor(attrs){
+    this.length = attrs.length;
+    this.width = attrs.width;
+    this.height = attrs.height;
   }
   volume(volume){
     return this.length * this.width * this.height
@@ -205,6 +222,10 @@ class CuboidMakerTwo{
   }
 }
 
+//class cuboidTwo extends CuboidMakerTwo{
+ // constructor(CuboidMakerTwo)
+ // super(CuboidMakerTwo);
+//}
 
 
 
